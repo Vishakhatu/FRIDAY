@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { MongoClient } from "mongodb";
 import { BufferMemory } from "langchain/memory";
 import { MongoDBChatMessageHistory } from "@langchain/mongodb";
+export const maxDuration = 120;
 
 const handler = async function (
   req: NextApiRequest,

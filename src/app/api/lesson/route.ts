@@ -1,4 +1,6 @@
 import GetLessonService from "@/services/lesson";
+export const maxDuration = 120;
+
 
 export async function GET(req: Request) {
   try {

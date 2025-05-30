@@ -1,5 +1,5 @@
 import getCourseService from "@/services/course";
-export const maxDuration = 120;
+export const maxDuration = 60;
 export async function POST(req: Request) {
   try {
     const { prompt } = (await req.json()) as { prompt: string };

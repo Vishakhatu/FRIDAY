@@ -6,7 +6,7 @@ import { ConversationChain } from "langchain/chains";
 import { MongoDBChatMessageHistory } from "@langchain/mongodb";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-export const maxDuration = 120;
+export const maxDuration = 60;
 
 const handler = async function (
   req: NextApiRequest,

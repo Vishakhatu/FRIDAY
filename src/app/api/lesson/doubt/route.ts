@@ -26,7 +26,7 @@ export async function PATCH(req: Request) {
       code,
       description,
       doubt,
-    );
+    ) as any;
     const expFromDb = await lessonService.addDoubt(
       lessonId,
       index,

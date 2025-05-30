@@ -80,7 +80,7 @@ input prompt =
         format_instructions: this.expectedOutput,
       });
 
-      const chain = partialedPrompt.pipe(model).pipe(parser);
+      const chain = partialedPrompt.pipe(model as any).pipe(parser as any);
 
       const res = await chain.invoke({
         prompt: this.coursePrompt + coursePrompt,

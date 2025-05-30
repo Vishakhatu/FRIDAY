@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     }
     const courseService = await getCourseService();
     const course = await courseService.generateCourseOutline(prompt);
-    const createdCourse = await courseService.saveCourse(course);
+    const createdCourse = await courseService.saveCourse(course as any);
     return Response.json(createdCourse, { status: 200 });
   } catch (error) {
     console.log("error in /course/generate[GET] ", error);

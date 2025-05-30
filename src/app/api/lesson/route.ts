@@ -16,7 +16,7 @@ export async function GET(req: Request) {
       const generetedLesson = await lessonService.generateLesson(
         tech,
         lessonName,
-      );
+      ) as any;
       generetedLesson.userEmail = userEmail;
       generetedLesson.lessonId = lessonId;
       generetedLesson.completedTill = "";

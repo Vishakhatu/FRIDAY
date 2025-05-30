@@ -55,7 +55,8 @@ begin!`,
     );
 
     const parser = new JsonOutputParser<Explanation>();
-    const chain = promptTemplate.pipe(model).pipe(parser);
+    
+    const chain = promptTemplate.pipe(model as any).pipe(parser as any);
     const result = await chain.invoke({
       technology_tech_course_name: courseName,
       userInput: prompt,
@@ -91,7 +92,7 @@ begin!`,
     );
 
     const parser = new JsonOutputParser<LessonContent>();
-    const chain = promptTemplate.pipe(model).pipe(parser);
+    const chain = promptTemplate.pipe(model as any).pipe(parser as any);
     const result = await chain.invoke({
       technology_tech_course_name: technology_tech_course_name,
       lesson_name: lesson_name,

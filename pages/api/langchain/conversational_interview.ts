@@ -60,7 +60,7 @@ const handler = async function (
                 Current conversation:\n{history}\nHuman: {input}\nAI:
                
                 begin!`)
-  const chain = new ConversationChain({ llm: model, memory,prompt });
+  const chain = new ConversationChain({ llm: model, memory,prompt:prompt as any});
   
   const res1 = await chain.invoke({ input:input});
   const history = await memory.chatHistory.getMessages()
